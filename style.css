@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+}  
+body,html{
+    height: 100%;
+    margin: 0;
+    background:#111;
+  font-family: "Playfair Display", serif;
+}
+section{
+  padding: 15px 7%;
+}
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#808080;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow:4px 4px 7px #111;
+  }
+  
+  .navbar-list {
+    float: right;
+  }
+  
+  .navbar-list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar-list a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color:lime;
+    height: 50px;
+
+  }
+  #navbar-text{
+    font-size:30px ;
+  }
+h1{
+    color:blue;
+}
+.button{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 20vh;
+    margin: 0;
+}
+.btn{
+    font-size: 17px;
+    margin-top: 8px;
+    display: inline-block;
+    background:lime;
+    color: #fff;
+    border-radius: 50%;
+    padding: 17px;
+    border-radius: 15px;
+    position:  relative;
+    z-index: 0;
+    overflow: hidden;
+    text-decoration: none;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.btn::before,
+.btn::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    z-index:-1;
+    transition: .3s linear;
+}
+.btn::before{
+    left: 0;
+}
+.btn::after{
+    right: 0;
+}
+.btn:hover:before,
+.btn:hover:after{
+ width:100%;
+}
+/*landing page*/
+.home{
+  background: url(../photos/bg.jpeg)no-repeat;
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+}
+.home .content h3{
+  font-size:40px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.home .content h3 span{
+  color: #000;
+  text-transform: uppercase; 
+}
+.home .content p{
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 0;
+  line-height:2;
+}
+.about .row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap:13px;
+  line-height: 2;
+
+}
+.about .row .content{
+  flex: 1 1 80px;
+}
+.about .row .content span{
+  font-size: 2.5rem;
+  color: #808080;
+}
+.about .row .content h3{
+  font-size: 20px;
+  color: white;
+  padding-left: 10px 0;
+}
+.about .row .content p{
+  font-size: 1.4rem;
+  color: white;
+  padding: 3rem 0;
+  line-height:2;
+}
+.about .row .content ul li{
+  font-size: 1.7rem;
+  color: #fff;
+  padding-top:1.5rem;
+}
+.about .row .image{
+  flex: 1 1 20rem;
+}
+.about .row .image img{
+   width: 100%;
+   height: 100%;
+}
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.Features{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+.card-collection{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+.Features-head{
+  text-align: center;
+  color: aliceblue;
+  z-index: 3;
+}
+ .card{
+  margin:0 auto;
+  padding: 4em;
+  width: 100px;
+  height: 100px;
+  background-color: #111;
+  color: aliceblue;
+  text-align: center;
+  border-radius:10px;
+  position: relative;
+  align-items: center;
+  
+ }
+ .card::after,.card::before{
+  content:"";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background:red;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+ }
+ .card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+ }
+/*end*
+/
+/*voters page*/
+.pfp{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  top: 30px;
+  right: 5%;
+}
+.h1voters{
+  top:40px;
+  z-index: 3;
+  position: absolute;
+}
+.checkbox-group {
+    margin: 20px 0;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-family: cursive;
+    line-height: 3;
+}
+
+label {
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.9); /* Makes the checkbox larger */
+    cursor: pointer; /* Change cursor on hover */
+}
+.controller{
+  align-items: center;
+}
+
+/**end**/
+/*candidate registration*/
+/*input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color:#daa520;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color:#daa520;
+  }
+  
+  div {
+    border-radius: 5px;
+    padding: 20px;
+  }*/
+  .poll body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #ff9800; /* Orange text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+header {
+    top:40px;
+    text-align: center;
+    padding: 20px;
+    z-index: 3;
+}
+form {
+    background-color: #333; /* Slightly lighter background for form */
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 300px;
+    margin-bottom: 20px;
+  
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    background-color: #ff9800; /* Orange button */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+}
+/**end**/
+/*wallet*/
+.head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#walletconnection{
+  display: flex;
+  align-items: center;
+}
+#connectbutton{
+  padding: 10px 20px;
+  cursor: pointer;
+}
+main{
+  display: flex;
+  flex-direction: column;
+}
+.section{
+  background: #fff;
+  padding: 15px;
+  margin: 10px 0;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+th,td{
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+th{
+  background-color: #f4f4f4;
+}
+/**end**/
